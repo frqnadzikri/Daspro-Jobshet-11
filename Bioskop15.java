@@ -10,6 +10,7 @@ public class Bioskop15 {
         penonton[2][0] = "Eka";
         penonton[2][1] = "Farhan";
         penonton[3][0] = "Gisel";
+        penonton[3][1] = "Hana";
 
         System.out.println("Daftar Penonton Bioskop:");
         System.out.println(penonton[0][0] + "\t" + penonton[0][1]);
