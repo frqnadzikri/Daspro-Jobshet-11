@@ -34,7 +34,7 @@ public class BioskopWithScanner15 {
                     
                     if (baris < 1 || baris > 4 || kolom < 1 || kolom > 2) {
                         System.out.println("Nomor baris/kolom tidak tersedia! Silakan coba lagi.");
-                        continue; // ulangi input
+                        continue; 
                     }
                     
                     if (penonton[baris-1][kolom-1] != null) {
@@ -52,7 +52,9 @@ public class BioskopWithScanner15 {
                 System.out.println("\n=== DAFTAR PENONTON ===");
                 for (int i = 0; i < penonton.length; i++) {
                     for (int j = 0; j < penonton[i].length; j++) {
-                        if (penonton[i][j] != null) {
+                        if (penonton[i][j] == null) {
+                            System.out.println("Baris " + (i+1) + " Kolom " + (j+1) + ": ***");
+                        } else {
                             System.out.println("Baris " + (i+1) + " Kolom " + (j+1) + ": " + penonton[i][j]);
                         }
                     }
