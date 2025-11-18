@@ -15,19 +15,30 @@ public class BioskopWithScanner15 {
             System.out.println("3. Exit");
             System.out.print("Pilih menu (1-3): ");
             pilihan = sc.nextInt();
-            sc.nextLine();
+            sc.nextLine(); 
             
             if (pilihan == 1) {
                 System.out.print("Masukkan nama: ");
                 String nama = sc.nextLine();
                 
-                System.out.print("Masukkan baris: ");
-                int baris = sc.nextInt();
-                sc.nextLine();
+                int baris, kolom;
                 
-                System.out.print("Masukkan kolom: ");
-                int kolom = sc.nextInt();
-                sc.nextLine();
+                while (true) {
+                    System.out.print("Masukkan baris (1-4): ");
+                    baris = sc.nextInt();
+                    sc.nextLine();
+                    
+                    System.out.print("Masukkan kolom (1-2): ");
+                    kolom = sc.nextInt();
+                    sc.nextLine();
+                    
+                    if (baris < 1 || baris > 4 || kolom < 1 || kolom > 2) {
+                        System.out.println("Nomor baris/kolom tidak tersedia! Silakan coba lagi.");
+                        continue; 
+                    }
+                    
+                    break;
+                }
                 
                 penonton[baris-1][kolom-1] = nama;
                 System.out.println("Data penonton berhasil disimpan!");
